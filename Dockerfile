@@ -1,5 +1,9 @@
 FROM node:8-alpine
 
+ENV STAN_URL 'nats://localhost:4222'
+ENV STAN_MONITOR_URL 'http://localhost:8222'
+ENV STAN_CLUSTER 'test-cluster'
+
 ENV CODE /usr/src/app
 WORKDIR $CODE
 
